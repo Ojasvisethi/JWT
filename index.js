@@ -29,11 +29,6 @@ app.get("/generate", (req, res) => {
   res.json({ token });
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-
 const OLDdata = [
   { label: "Jan 09", totalSales: 480, extrasSales: 320 - 300 },
   { label: "Jan 10", totalSales: 580, extrasSales: 400 - 300 },
@@ -68,6 +63,11 @@ const OLDdata = [
 
 app.get("/hotelData", (req, res) => {
   return OLDdata;
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 // const axios = require('axios')
