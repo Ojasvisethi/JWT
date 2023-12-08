@@ -62,7 +62,7 @@ const OLDdata = [
 ];
 
 app.get("/hotelData", (req, res) => {
-  return OLDdata;
+  res.json(OLDdata);
 });
 
 const port = process.env.PORT || 3000;
